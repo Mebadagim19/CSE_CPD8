@@ -1,0 +1,27 @@
+#include <iostream>
+#include <set>
+#include <string>
+using namespace std;
+
+int main() {
+    string username;
+    cin >> username;
+
+    // Use a set to store distinct characters
+    set<char> distinct_characters;
+    for (char c : username) {
+        distinct_characters.insert(c);
+    }
+
+    // Check the number of distinct characters
+    int distinct_count = distinct_characters.size();
+
+    // Determine the gender based on the distinct character count
+    if (distinct_count % 2 == 0) {
+        cout << "CHAT WITH HER!" << endl;
+    } else {
+        cout << "IGNORE HIM!" << endl;
+    }
+
+    return 0;
+}
